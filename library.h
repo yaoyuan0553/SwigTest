@@ -15,6 +15,10 @@ void printStr(const char* str);
 
 std::string makeStr();
 
-void changeStr(std::string& str);
+void takeStr(std::string str);
+
+void changeStr(char* str, int length);
+
+void fillArray(int arr[], int n);
 
 #endif //SWIGTEST_LIBRARY_H

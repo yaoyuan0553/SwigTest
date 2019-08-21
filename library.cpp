@@ -3,6 +3,8 @@
 #include <iostream>
 #include <stdio.h>
 
+using namespace std;
+
 void hello()
 {
     std::cout << "Hello, World!" << std::endl;
@@ -18,8 +20,26 @@ std::string makeStr()
     return "made this string";
 }
 
-void changeStr(std::string& str)
+void takeStr(std::string str)
 {
-    str += " changed";
+    std::cout << str << '\n';
+}
+
+void changeStr(char* str, int length)
+{
+    cout << str << " " << length << '\n';
+
+    for (int i = 0; i < length; i++) {
+        str[i] = 'a';
+    }
+
+    printf("changed str: %s\n", str);
+}
+
+void fillArray(int arr[], int n)
+{
+    for (int i = 0; i < n; i++) {
+        arr[i] += i;
+    }
 }
 
