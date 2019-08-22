@@ -25,8 +25,8 @@ swig_add_library(
 
 target_include_directories(
         TestSwigJava PRIVATE
-        /usr/share/jdk1.8.0_202/include
-        /usr/share/jdk1.8.0_202/include/linux
+        /usr/share/jdk1.8.0_221/include
+        /usr/share/jdk1.8.0_221/include/linux
         ${CMAKE_CURRENT_SOURCE_DIR}
 )
 

@@ -21,4 +21,6 @@ void changeStr(char* str, int length);
 
 void fillArray(int arr[], int n);
 
+void changeIntPointerArray(int* array, int n);
+
 #endif //SWIGTEST_LIBRARY_H

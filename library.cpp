@@ -43,3 +43,10 @@ void fillArray(int arr[], int n)
     }
 }
 
+void changeIntPointerArray(int* array, int n)
+{
+    for (int i = 0; i < n; i++)
+        array[i] = i * 2;
+}
+
+
