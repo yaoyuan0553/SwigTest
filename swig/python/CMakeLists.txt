@@ -21,6 +21,8 @@ swig_add_library(
         SOURCES ${SWIG_I_SOURCE_DIR}/library.i ${SWIG_CPP_SOURCE_DIR}/library.cpp
 )
 
+set_property(TARGET TestSwigPython PROPERTY SWIG_COMPILE_OPTIONS -py3 -fastproxy -olddefs)
+
 target_include_directories(
         TestSwigPython PRIVATE
         /usr/include/python3.6
