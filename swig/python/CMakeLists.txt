@@ -18,13 +18,15 @@ swig_add_library(
         LANGUAGE python
         OUTPUT_DIR ${CMAKE_SOURCE_DIR}/swig_out/python
         OUTFILE_DIR ${CMAKE_SOURCE_DIR}/swig_out/python
-        SOURCES ${SWIG_I_SOURCE_DIR}/library.i ${SWIG_CPP_SOURCE_DIR}/library.cpp
+        SOURCES ${SWIG_I_SOURCE_DIR}/library.i ${SWIG_CPP_SOURCE_DIR}/library.cpp ${SWIG_CPP_SOURCE_DIR}/DataTypes.cpp ${SWIG_CPP_SOURCE_DIR}/Semaphore.cpp
 )
 
-set_property(TARGET TestSwigPython PROPERTY SWIG_COMPILE_OPTIONS -py3 -fastproxy -olddefs)
+set_property(TARGET TestSwigPython PROPERTY SWIG_COMPILE_OPTIONS -py3 -doxygen -fastproxy -olddefs)
 
 target_include_directories(
         TestSwigPython PRIVATE
         /usr/include/python3.6
         ${CMAKE_CURRENT_SOURCE_DIR}
 )
+
+target_link_libraries(TestSwigPython pthread)
